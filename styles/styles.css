@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(34, 34, 34);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0;
+    padding: 15px;
+}
+
+.imagem1{
+   height:300px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+a{
+   color: white;
+}
+
+a:hover{
+     color: rgb(116, 114, 114);
+     transition: 0.3s all;
+}
+
+#increva-se-btn{
+    border: 2px solid rgb(121, 101, 101);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+h1{
+   font-weight: 200px; 
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 56px;
+    line-height: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+    color: rgb(116, 114, 114);
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 450px;
+}
