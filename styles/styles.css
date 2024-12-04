@@ -1,98 +1,151 @@
-body{
-    background-color: rgb(156, 154, 154);
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 1200px;
-    margin: 0;
-   
-}
-header {
-    color: white;
-    background-color: rgba(59, 59, 59, 0.781);
-    padding: 66px;
-    width: 100vw; 
-    overflow: auto;
-    box-sizing: border-box; 
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    background: linear-gradient(white, black);
+    margin: 0;
+    padding: 0;
+    color: #202020;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000, #333, #fff);
+    color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgba(59, 59, 59, 0.781);
+    color: white;
+    padding: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    font-weight: bold;
+    font-weight: 100; /* Ajuste o peso da fonte */
     text-align: center;
+    flex-grow: 1; /* Faz o título ocupar o espaço disponível */
+}
+
+header img {
+    height: 90px;
+    margin-right: 15px;
+    margin-bottom: 60px;
+    position: absolute;  /* Ajusta a posição de forma absoluta */
+    left: 20px;  /* Distância da margem esquerda */
+
 }
 
 
 nav {
-    background-color: white;
-    padding: 15px;
-    text-align: center;
-    width: 100vw; 
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    background-color: #fff; /* Alterado para branco */
 }
 
 nav a {
-    color: black;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-
-
-#title{
-    flex-direction: column;
-    line-height: 10px;
+nav a:hover {
+    background-color: #bbb;
 }
 
-li{
-    display: inline-block;
-    margin: 20px;
-}
-
-a{
-   color: white;
-}
-
-a:hover{
-     color: rgb(53, 53, 53);
-     transition: 0.3s all;
-}
-
-#increva-se-btn{
-    border: 2px solid rgb(121, 101, 101);
-    padding: 10px;
-    border-radius: 20px;
-}
-
-h1{
-   font-weight: 200px; 
-}
-
-main{
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 20px;
 }
 
-h2{
-    font-size: 56px;
-    line-height: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+ .conteudo-secundario {
+    flex: 1;
+    max-width: 45%;
+ }
+
+ .conteudo-secundario h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+ }
+
+ .conteudo-secundario p {
+    font-size: 16px;
+    line-height: 1.6;
+ }
+
+ .conteudo-secundario .conteudo-principal-escrito-botao {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+ }
+
+ .conteudo-secundario .conteudo-principal-escrito-botao:hover {
+    background-color: #0056b3;
+ }
+
+ .carousel {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+ }
+
+ .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+ }
+
+ .carousel img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Espaço entre o conteúdo e o footer */
 }
 
-span{
-    color: rgb(116, 114, 114);
-}
-
-p{
-    line-height: 20px;
-    max-width: 500px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-img{
-    width: 450px;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 

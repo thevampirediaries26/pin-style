@@ -1,45 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles/styles.css" rel="stylesheet">
-    <title>PIN STYLE</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+   <title>PIN STYLE</title>
 </head>
-<body>
-    <header>
-        <img src="logo.site.png" style="float: left;">
-        <br>
-        <h1>PIN STYLE</h1> 
-    </header>
-      
-        </nav>
-    
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Feminino</a>
-        <a href="#">Masculino</a>
-        <a href="#">Montar Estilo</a>
-        <a href="#">Postagens</a>
-    </nav>
+<header>
+   <img src="logo.site.png" style="float: left;" alt="Logo">
+   <h1>PIN STYLE</h1>
+</header>
 
-    <main>
-        <aside>
-            <h2><span>Faça já sua conta</span></h2>
-            <h2>no PIN STYLE.</h2>
-            <p>Eu vou ficar mais vou pela manhã sem me despedir, vou antes do café, que é pra não te acordar. Sei que você me quer.</p>
+<nav>
+   <a href="#">Início</a>
+   <a href="#">Feminino</a>
+   <a href="#">Masculino</a>
+   <a href="#">Montar Estilo</a>
+   <a href="#">Postagens</a>
+</nav>
 
-            <form>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="E-mail">
-                <input type="submit" value="Enviar">
-            </form>
-        </aside>
+<main>
+   <!-- Conteúdo secundário (esquerda) -->
+   <section class="conteudo-secundario">
+      <h3>Um pouco sobre nós!</h3>
+      <p>O Pin Style vem com o intuito ajudar você que ainda
+         não tem um estilo definido. Para quem quer melhorar
+         seu estilo, o Pin Style traz novos modelos
+         de roupas.
+      </p>
+      <button class="conteudo-principal-escrito-botao">ENTRAR</button>
+   </section>
 
-        <article>
-            <img src="logo.site.png" class="imagem1">
-        </article>
-    </main>
+   <!-- Carrossel (direita) -->
+   <section class="carousel">
+      <div class="carousel-images">
+         <img src="imagens/topo_mobile_categoria_sale.webp" alt="Imagem 1">
+         <img src="imagens/topo_mobile_categorias_roupas.webp" alt="Imagem 2">
+         <img src="imagens/topo_mobile_marca_boss_masculino.webp" alt="Imagem 3">
+      </div>
+   </section>
+</main>
+
+<footer>
+   <p>Número: 44 99905-0278 | Instagram: <a href="https://instagram.com/pinstile.pr" target="_blank" style="color: #ddd;">@pinstyle.pr</a></p>
+   <br>
+   <p>Mais estilos</p>
+   <br>
+</footer>
+
+<script>
+   const images = document.querySelector('.carousel-images');
+   const totalImages = document.querySelectorAll('.carousel img').length;
+   let index = 0;
+
+   // Função para atualizar o carrossel
+   function updateCarousel() {
+      const width = document.querySelector('.carousel').clientWidth;
+      images.style.transform = `translateX(${-index * width}px)`;
+   }
+
+   // Função para passar automaticamente
+   function autoSlide() {
+      index = (index + 1) % totalImages;
+      updateCarousel();
+   }
+
+   // Iniciar o carrossel automático
+   setInterval(autoSlide, 3000);
+
+   // Atualizar o carrossel no redimensionamento da janela
+   window.addEventListener('resize', updateCarousel);
+</script>
 </body>
 </html>
