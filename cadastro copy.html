@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro - Pin Style</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, black, white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+ 
+    .register-container {
+      background-color: white;
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+ 
+    .register-container h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: black;
+    }
+ 
+    .register-container form {
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .register-container input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+ 
+    .register-container button {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+ 
+    .register-container button:hover {
+      background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="register-container">
+<h1>Seja Bem-Vindos ao Pin Style, onde seu estilo se transforma!</h1>
+<form id="register-form">
+<input type="text" id="name" placeholder="Nome Completo" required>
+<input type="email" id="email" placeholder="E-mail" required>
+<input type="password" id="password" placeholder="Senha" required>
+<input type="password" id="confirm-password" placeholder="Confirme sua Senha" required>
+<input type="date" id="dob" placeholder="Data de Nascimento" required>
+<input type="tel" id="phone" placeholder="Telefone (opcional)">
+<button><a href="login.html">Cadastrar</a></button>
+</form>
+</div>
+ 
+  <script>
+    const form = document.getElementById('register-form');
+ 
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+ 
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+ 
+      if (password !== confirmPassword) {
+        alert('As senhas não conferem. Por favor, tente novamente.');
+        return;
+      }
+ 
+      alert(`Cadastro realizado com sucesso!\n\nNome: ${name}\nEmail: ${email}`);
+      form.reset();
+    });
+</script>
+</body>
+</html>
